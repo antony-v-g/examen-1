@@ -1,0 +1,25 @@
+@model List<PortalCampanas.Models.Campaña>
+
+<h2>Listado de Campañas</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var c in Model)
+    {
+        <tr>
+            <td>@c.Nombre</td>
+            <td>@c.Categoria</td>
+            <td>@c.Estado</td>
+            <td><a asp-action="Detalle" asp-route-id="@c.Id">Ver detalle</a></td>
+        </tr>
+    }
+    </tbody>
+</table>
