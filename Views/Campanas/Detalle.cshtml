@@ -1,0 +1,11 @@
+@model PortalCampanas.Models.Campaña
+
+<h2>Detalle de Campaña</h2>
+
+<p><b>Nombre:</b> @Model.Nombre</p>
+<p><b>Categoría:</b> @Model.Categoria</p>
+<p><b>Estado:</b> @Model.Estado</p>
+<p><b>Fechas:</b> @Model.FechaInicio.ToShortDateString() - @Model.FechaFin.ToShortDateString()</p>
+<p><b>Canal:</b> @Model.Canal</p>
+<p><b>Descuento:</b> @Model.DescuentoPct %</p>
+<p><b>Descripción:</b> @Model.Descripcion</p>
