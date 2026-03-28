@@ -1,0 +1,16 @@
+@model dynamic
+
+<h2>Resumen de Campañas</h2>
+
+<p><b>Total:</b> @Model.Total</p>
+<p><b>Vigentes:</b> @Model.Vigentes</p>
+<p><b>Próximas:</b> @Model.Proximas</p>
+<p><b>Promedio de Descuento:</b> @Model.PromedioDescuento %</p>
+
+<h3>Cantidad por Canal</h3>
+<ul>
+@foreach (var canal in Model.CantidadPorCanal)
+{
+    <li>@canal.Key: @canal.Value</li>
+}
+</ul>
